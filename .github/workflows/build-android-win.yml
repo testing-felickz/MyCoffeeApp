@@ -12,4 +12,7 @@ jobs:
     - name: Install dependencies
       run: nuget restore MyCoffeeApp.sln
     - name: Build
-      run: msbuild .\MyCoffeeApp.Android\MyCoffeeApp.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
+      run: |
+        cd MyCoffeeApp.Android
+        msbuild MyCoffeeApp.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
+                     
