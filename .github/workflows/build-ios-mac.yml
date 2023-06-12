@@ -25,4 +25,4 @@ jobs:
       run: nuget restore MyCoffeeApp.sln
 
     - name: Build
-      run: msbuild .\MyCoffeeApp.iOS\MyCoffeeApp.iOS.csproj /t:PackageForAndroid /p:Configuration=Debug
+      run: msbuild .\MyCoffeeApp.iOS\MyCoffeeApp.iOS.csproj /p:Configuration=Debug /p:Platform=iPhoneSimulator /t:Rebuild
