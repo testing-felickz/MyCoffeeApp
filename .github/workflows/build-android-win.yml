@@ -13,6 +13,8 @@ jobs:
       run: nuget restore MyCoffeeApp.sln
     - name: Build
       run: |
+        dir
         cd MyCoffeeApp.Android
+        dir
         msbuild MyCoffeeApp.Android.csproj /t:PackageForAndroid /p:Configuration=Debug
                      
